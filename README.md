@@ -1,4 +1,4 @@
-'''
+```
 Usage: test.py [options]
        test.py -l [options] [FILE]
 
@@ -30,4 +30,4 @@ Options:
   -B BACKEND, --backend=BACKEND
                         use specified ijson backend, default is pure Python
                         (load mode only)
-'''
+```
