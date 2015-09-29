@@ -9,7 +9,6 @@ import sys
 import functools
 from rediscluster import StrictRedisCluster, RedisCluster
 
-TT=type
 try:
     import ijson as ijson_root
     have_streaming_load = True
@@ -219,7 +218,6 @@ def _read_key(key, r, pretty, encoding):
 
 def _reader(r, pretty, encoding, rs):
     for encoded_key in rs.scan_iter(match="*"):
-        print TT(encoded_key), r.type(encoded_key),encoded_key;
         key = encoded_key.decode(encoding)
         handled = False
         for i in range(10):
